@@ -25,10 +25,9 @@ jobs:
       #    echo ${{ steps.fetch-dynamic-secrets.outputs.postgres_dynamic_secret }}
       - name: Verify Vars
         run: |
-          echo "host: ${{ env.POSTGRES_HOST }} " >> secrets.txt
-          echo "port: ${{ env.POSTGRES_PORT }} " >> secrets.txt
-          echo "username: ${{ env.POSTGRES_USER }} " >> secrets.txt
-          echo "password: ${{ env.POSTGRES_PASSWORD }} " >> secrets.txt
-          echo "db_name: ${{ env.POSTGRES_DB_NAME }} " >> secrets.txt
-          echo "ttl_in_minutes: ${{ env.POSTGRES_TTL_IN_MINUTES }} " >>
-          secrets.txt           
+          echo "host: ${{ env.host }} " >> secrets.txt
+          echo "port: ${{ env.port }} " >> secrets.txt
+          echo "username: ${{ env.user }} " >> secrets.txt
+          echo "password: ${{ env.password }} " >> secrets.txt
+          echo "db_name: ${{ env.db_name }} " >> secrets.txt
+          echo "ttl_in_minutes: ${{ env.ttl_in_minutes }} " >> secrets.txt           
